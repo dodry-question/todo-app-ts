@@ -3,5 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "//": "frontend/package.json — манифест фронтенда. Здесь нужно (участники 1 и 4): добавить скрипты (запуск, сборка, предпросмотр сборки) и зависимости."
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.2"
+  }
 }

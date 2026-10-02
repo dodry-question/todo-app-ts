@@ -1,2 +1,16 @@
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
 // frontend/vite.config.ts — настройки сборщика и dev-сервера фронтенда.
-// Здесь нужно: подключить плагин для React и указать порт (и при желании проксирование запросов к API при локальной разработке).
+// react() учит Vite понимать JSX/TSX и включает быструю перезагрузку при разработке.
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 5173,
+    // Во время локальной разработки запросы к /api уходят на бэкенд (Ktor, порт 8080),
+    // поэтому в браузере не возникает ошибок CORS.
+    proxy: {
+      '/api': 'http://localhost:8080',
+    },
+  },
+})

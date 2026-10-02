@@ -1,3 +1,17 @@
-// frontend/tsconfig.json — настройки TypeScript для фронтенда.
-// Здесь нужно: строгий режим проверки, поддержка JSX, разрешение модулей под сборщик, пути к исходникам,
-// типы для сборщика (чтобы работали переменные окружения вида import.meta.env) и правила проверки неиспользуемого кода.
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "skipLibCheck": true,
+    "noEmit": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"]
+}
