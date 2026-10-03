@@ -38,3 +38,12 @@ export type UpdateTaskRequest = {
     title: string;
     description?: string;
 }
+
+export type AuthResponse = {
+    token: string;
+    user: User
+}
+
+export type MessageResponse = {
+    message: string;
+}
